@@ -1,0 +1,128 @@
+/* ==========COMMON CSS START========== */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul,li {
+    list-style-type: none;
+}
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+    padding: 0;
+    line-height: 0.8;
+}
+
+
+/* ==========COMMON CSS END========== */
+
+
+
+/* ==========NAVBAR CSS START========== */
+.navbar{
+    border-bottom: 1px solid #00ffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-item{
+    margin-left: 20px;
+    position: relative;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    font-family: 'Roboto Serif', serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    transition: all linear 0.4s;
+}
+.nav-item::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #6cfff1;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: all linear 0.4s;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+    color: #6cfff1;
+    font-weight: 600;
+}
+.nav-item:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* ==========NAVBAR CSS END========== */
+
+
+
+/* ==========BANNER CSS START========== */
+#banner{
+    background: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+#banner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+.banner-details h4{
+    font-family: 'Radley', serif;
+    font-size: 30px;
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+.banner-details h1{
+    font-family: 'Radley', serif;
+    font-size: 60px;
+    color: #6cfff1;
+    padding-bottom: 15px;
+}
+.banner-details p{
+    font-family: 'Radley', serif;
+    font-size: 35px;
+    color: #ffffff;
+    padding-bottom: 25px;
+}
+.banner-details p span{
+    font-family: 'Radley', serif;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 24px;
+    padding-top: 20px;
+    display: inline-block;
+}
+.banner-image img {
+    overflow: hidden;
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+
+/* ==========BANNER CSS END========== */
