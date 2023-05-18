@@ -1,0 +1,679 @@
+/* ==========COMMON CSS START========== */
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+ul,li {
+  list-style-type: none;
+}
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  padding: 0;
+  line-height: 0.8;
+}
+body{
+  background: #551eb8;
+  overflow-x: hidden;
+}
+/* .bodycursor{
+  width:0px;
+  height:0px;
+  border:1px solid;
+  border-color:#00ffd0;
+  border-radius:25px;
+  position:absolute;
+} */
+
+
+/* ==========GO TO TOP CSS PART START========== */
+
+.go-to-top{
+  width: 50px;
+  height: 50px;
+  background: #3dfdff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #1d002e;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  z-index: 999;
+  display: none;
+  transition: all linear 0.4s;
+}
+
+/* ==========GO TO TOP CSS PART END========== */
+
+
+
+/* ==========COMMON CSS END========== */
+
+
+
+/* ==========NAVBAR CSS START========== */
+.navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.navbar::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #ff31fa , #3dfdff);
+}
+
+.nav-item{
+  margin-left: 20px;
+  position: relative;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-family: 'Roboto Serif', serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  transition: all linear 0.4s;
+}
+.nav-item::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #6cfff1;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: all linear 0.4s;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+  color: #6cfff1;
+  font-weight: 600;
+}
+.nav-item:hover::after{
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.nav-scroll{
+  background: #1d002e;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  animation: animator 1s;
+}
+@keyframes animator {
+  from{
+      top: -200px;
+  }
+  to{
+      top: 0;
+  }
+}
+
+/* ==========NAVBAR CSS END========== */
+
+
+
+/* ==========BANNER CSS START========== */
+#banner{
+  padding-top: 200px;
+  padding-bottom: 100px;
+  position: relative;
+  background: #1d002e;
+  z-index: 1;
+}
+.banner-details h4{
+  font-family: 'Radley', serif;
+  font-size: 30px;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+.banner-details h1{
+  font-family: 'Radley', serif;
+  font-size: 60px;
+  color: #6cfff1;
+  padding-bottom: 15px;
+}
+.banner-details p{
+  font-family: 'Radley', serif;
+  font-size: 35px;
+  color: #ffffff;
+  padding-bottom: 25px;
+}
+.banner-details p span{
+  font-family: 'Radley', serif;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 24px;
+  padding-top: 20px;
+  display: inline-block;
+}
+.banner-image img {
+  overflow: hidden;
+  height: 360px;
+  width: 300px;
+  object-fit: cover;
+}
+.banner-image {
+  position: relative;
+  display: inline-block;
+  color: #6cfff1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.banner-image:hover {
+  background: #6cfff1;
+  color: #fff;
+  border-radius: 10%;
+  box-shadow: 0 0 5px #6cfff1,
+              0 0 25px #6cfff1,
+              0 0 50px #6cfff1,
+              0 0 100px #6cfff1;
+}
+
+.banner-image span {
+  position: absolute;
+  display: block;
+}
+
+.banner-image span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6cfff1);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.banner-image span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #6cfff1);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.banner-image span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #6cfff1);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.banner-image span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #6cfff1);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+.social-media a {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #6cfff1;
+  border-radius: 50%;
+  font-size: 25px;
+  line-height: 45px;
+  text-align: center;
+  color: #6cfff1;
+  margin-right: 20px;
+  transition: all linear 0.4s;
+}
+.social-media a:hover{
+  background: #6cfff1;
+  color: #000000;
+  box-shadow: 0 0 1rem #6cfff1;
+}
+/* .banner-details button{
+  font-family: 'Roboto Serif', serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #6cfff1;
+  border-radius: 20px;
+  transition: all linear 0.4s;
+}
+.banner-details button:hover,
+.banner-details button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #6cfff1;
+  transform: translateY(-0.25em);
+  background: transparent;
+  color: #6cfff1;
+} */
+
+.banner-details button:hover,
+.banner-details button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #6cfff1;
+  color: #6cfff1;
+}
+.banner-details button{
+  margin-top: 30px;
+}
+.custom-btn {
+  padding: 10px 25px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #6cfff1;
+  text-transform: uppercase;
+  background: transparent;
+  outline: none ;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+.btn-5 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-5 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-5:before,
+.btn-5:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #6cfff1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn-5:before {
+  height: 50%;
+  width: 2px;
+}
+.btn-5:after {
+  width: 20%;
+  height: 2px;
+}
+.btn-5:hover:before {
+  height: 100%;
+}
+.btn-5:hover:after {
+  width: 100%;
+}
+.btn-5 span:before,
+.btn-5 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #6cfff1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn-5 span:before {
+  width: 2px;
+  height: 50%;
+}
+.btn-5 span:after {
+  width: 20%;
+  height: 2px;
+}
+.btn-5 span:hover:before {
+  height: 100%;
+}
+.btn-5 span:hover:after {
+  width: 100%;
+}
+
+
+
+/* ==========BANNER CSS END========== */
+
+
+/* ==========ABOUT CSS END========== */
+
+#about{
+  padding: 150px 0;
+}
+.common-title{
+  padding-bottom: 80px;
+}
+.common-title h3{
+  font-family: 'Roboto Serif', serif;
+  font-size: 24px;
+  font-weight: 500px;
+  color: #3dfdff;
+  position: relative;
+}
+.common-title h3::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -180px;
+  width: 200px;
+  height: 2px;
+  background: #3dfdff;
+  transform: translateY(-50%);
+}
+.common-title h3::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -180px;
+  width: 200px;
+  height: 2px;
+  background: #3dfdff;
+  transform: translateY(-50%);
+}
+.about-details h3{
+  font-family: 'Radley', serif;
+  font-size: 40px;
+  color: #ffffff;
+  padding-bottom: 30px;
+}
+.about-details p{
+  font-family: 'Radley', serif;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 28px;
+}
+.about-skills h3{
+  font-family: 'Radley', serif;
+  font-size: 40px;
+  color: #ffffff;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.skills{
+  width: 100%;
+  height: 10px;
+}
+.skills .html{
+  width: 0;
+  height: 100%;
+  background: #3dfdff;
+  margin-bottom: 30px;
+  position: relative;
+}
+.skills .css{
+  width: 0;
+  height: 100%;
+  background: #3dfdff;
+  position: relative;
+}
+.skills .JavaScript{
+  width: 0;
+  height: 100%;
+  background: #3dfdff;
+  position: relative;
+}
+.skills .jQuery{
+  width: 0;
+  height: 100%;
+  background: #3dfdff;
+  position: relative;
+}
+.skills .Bootstrap{
+  width: 0;
+  height: 100%;
+  background: #3dfdff;
+  position: relative;
+}
+.skills .SASS{
+  width: 0;
+  height: 100%;
+  background: #3dfdff;
+  position: relative;
+}
+.skills .Tailwind{
+  width: 0;
+  height: 100%;
+  background: #3dfdff;
+  position: relative;
+}
+.skill-detail{
+  position: relative;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+.skills-lable {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-family: 'Radley', serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  width: 150px;
+}
+.skills .html::after {
+  content: '100%';
+  position: absolute;
+  top: -9px;
+  right: -45px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.skills .css::after {
+  content: '100%';
+  position: absolute;
+  top: -9px;
+  right: -45px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.skills .JavaScript::after {
+  content: '60%';
+  position: absolute;
+  top: -9px;
+  right: -45px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.skills .jQuery::after {
+  content: '70%';
+  position: absolute;
+  top: -9px;
+  right: -45px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.skills .Bootstrap::after {
+  content: '90%';
+  position: absolute;
+  top: -9px;
+  right: -45px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.skills .SASS::after {
+  content: '35%';
+  position: absolute;
+  top: -9px;
+  right: -45px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.skills .Tailwind::after {
+  content: '60%';
+  position: absolute;
+  top: -9px;
+  right: -45px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+
+
+
+
+
+/* ==========ABOUT CSS END========== */
+
+
+/* ==========PROJECT CSS END========== */
+#project{
+  padding: 100px 0;
+}
+#project .common-title h3::after{
+  left: -200px;
+}
+#project .common-title h3::before{
+  right: -200px;
+}
+.project-item{
+  width: 500px;
+  border: 4px solid #3dfdff;
+  border-radius: 10px;
+  position: relative;
+  transition: all linear 0.4s;
+  transform: scale(0.9);
+  overflow: hidden;
+}
+.project-item img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  height: auto;
+  transition: all linear 0.4s;
+}
+.project-img-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(61, 253, 255, 0) 0%, rgba(61, 253, 255, 0.75) 100%);
+  opacity: 0;
+  transition: all linear 0.4s;
+  overflow: hidden;
+}
+.project-img-overlay h3 {
+  font-family: 'Radley', serif;
+  font-size: 25px;
+  color: #000000;
+  font-weight: 600;
+  padding-top: 530px;
+  transition: all linear 0.4s;
+}
+.project-img-overlay p {
+  font-family: 'Radley', serif;
+  font-size: 16px;
+  color: #000000;
+  line-height: 24px;
+  padding-top: 10px;
+  width: 380px;
+  margin: 0 auto;
+}
+.project-img-overlay a{
+  font-family: 'Roboto Serif', serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #1d002e;
+  border: 3px solid #1d002e;
+  margin-top: 30px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all linear 0.4s;
+  color: #ffffff;
+}
+.project-img-overlay a:hover,
+.project-img-overlay a:focus {
+  transform: translateY(-0.25em);
+  background: transparent;
+  color: #1d002e;
+  overflow: hidden;
+}
+.project-item:hover .project-img-overlay{
+  opacity: 1;
+  border-radius: 10px;
+}
+.project-item:hover img{
+  transform: scale(1.1);
+}
+.project-item:hover h3{
+  padding-top: 300px;
+}
+.project-slider {
+  width: 1200px;
+  height: 540px;
+  background: #1d002e;
+  border-radius: 5px;
+}
+
+/* ==========PROJECT CSS END========== */
